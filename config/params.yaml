@@ -1,0 +1,81 @@
+project:
+  name: "CulturLand-Check"
+  version: "1.0.0"
+  city: "Xi'an"
+  artifact_dir: "artifacts/v20260225"
+
+data:
+  poi_raw: "data/raw/poi_info_final.json"
+  triplets_raw: "data/raw/triplets_seed.json"
+  geojson: "data/spatial/xian_city.geojson"
+  osm_buildings_shp: "data/spatial/osm_shapefiles/gis_osm_buildings_a_free_1.shp"
+  osm_roads_shp: "data/spatial/osm_shapefiles/gis_osm_roads_free_1.shp"
+  policy_dir: "data/policy"
+  clean_poi: "artifacts/v20260225/data/clean_poi.json"
+  clean_sentiment: "artifacts/v20260225/data/clean_sentiment.json"
+  quality_report: "artifacts/v20260225/data/quality_report.json"
+
+llm:
+  provider: "openai_compatible"
+  base_url: "https://api.openai.com/v1"
+  api_key: "YOUR_API_KEY"
+  model: "gpt-4.1-mini"
+  temperature: 0.1
+  max_tokens: 4096
+  timeout: 600
+  retry_count: 8
+  retry_delay: 5
+  min_interval_seconds: 0
+  cache_dir: "artifacts/v20260225/llm_cache"
+
+neo4j:
+  uri: ""
+  user: "neo4j"
+  password: ""
+  database: "culturland"
+
+kg:
+  output_dir: "artifacts/v20260225/kg"
+  triplets_full: "artifacts/v20260225/kg/triplets_full.json"
+  kg_stats: "artifacts/v20260225/kg/kg_stats.json"
+  min_confidence: 0.6
+  neighbor_distance_km: 2.0
+
+indicator:
+  output_dir: "artifacts/v20260225/indicator"
+  indicator_csv: "artifacts/v20260225/indicator/indicator_values.csv"
+  health_index_csv: "artifacts/v20260225/indicator/health_index.csv"
+  service_radius_m: 1000
+  weights:
+    supply: 0.35
+    demand: 0.35
+    quality: 0.30
+  demand_weights:
+    activity: 0.4
+    sentiment: 0.3
+    gap: 0.3
+
+diagnosis:
+  output_dir: "artifacts/v20260225/diagnosis"
+  top_k_subgraph: 10
+  evidence_chain_max: 5
+  dimensions: ["supply", "demand", "quality"]
+
+evaluation:
+  output_dir: "artifacts/v20260225/evaluation"
+  baselines: ["text_rag", "no_retrieval_llm", "rule_only", "lightrag"]
+  ablations: ["no_graph", "no_policy", "no_sentiment", "no_spatial"]
+  n_repeats: 3
+  significance_level: 0.05
+
+sentiment:
+  method: "snownlp"
+  city_relevance_threshold: 0.3
+
+visualization:
+  figure_dir: "outputs/figures"
+  table_dir: "outputs/tables"
+  dpi: 300
+  font_family: "SimHei"
+  figsize_map: [12, 10]
+  figsize_chart: [8, 6]

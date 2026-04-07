@@ -1,0 +1,15 @@
+PyYAML
+loguru
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+networkx
+geopandas
+shapely
+snownlp
+neo4j
+openai
+requests
+zhipuai

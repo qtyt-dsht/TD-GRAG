@@ -1,0 +1,3596 @@
+[
+  {
+    "entity_type": "poi_name",
+    "entity_name": "唐华清宫",
+    "attribute": [
+      {
+        "address": "陕西省西安市临潼区"
+      },
+      {
+        "coordinates": "34.36494273,109.2073934"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "门票价格": "120元/人·次"
+      },
+      {
+        "文物年代": "唐"
+      },
+      {
+        "文物级别": "第四批全国重点文物保护单位"
+      },
+      {
+        "批准文号": "国发〔1996〕47号"
+      },
+      {
+        "批准时间": "1996年11月20日"
+      },
+      {
+        "面积": "16平方公里"
+      },
+      {
+        "建成/发现时间": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "临潼区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "唐华清宫"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "明秦王府城墙遗址",
+    "attribute": [
+      {
+        "address": "陕西省西安市新城区皇城东路39号"
+      },
+      {
+        "coordinates": "34.26494183,108.9487112"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成/发现时间": "明洪武四年（1371年）"
+      },
+      {
+        "面积": "37.3768万平方米"
+      },
+      {
+        "保护级别": "陕西省第四批省级重点文物保护单位"
+      },
+      {
+        "编号": "6110097"
+      },
+      {
+        "所处时代": "明朝"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "明秦王府城墙遗址"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安唐城墙遗址公园",
+    "attribute": [
+      {
+        "address": "西安市雁塔区沣惠南路38号"
+      },
+      {
+        "coordinates": "34.24402748,108.8842008"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "保护类型": "国家重点文物保护单位"
+      },
+      {
+        "开放时间": "全天开放"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "建议游玩时长": "2-3小时"
+      },
+      {
+        "面积": "540亩"
+      },
+      {
+        "建成/发现时间": "唐代"
+      },
+      {
+        "区": "雁塔区"
+      },
+      {
+        "商业区": "沣惠南路"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家重点文物保护单位"
+      }
+    ],
+    "source_poi": "西安唐城墙遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大明宫国家遗址公园",
+    "attribute": [
+      {
+        "address": "陕西省西安市新城区自强东路585号"
+      },
+      {
+        "coordinates": "34.29412925,108.9588998"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "约3.84平方千米"
+      },
+      {
+        "建成/发现时间": "唐贞观八年（634年）"
+      },
+      {
+        "开放时间": "4月15日-10月15日8:30-19:00;10月16日-4月14日8:30-18:00"
+      },
+      {
+        "门票价格": "60元/人"
+      },
+      {
+        "景点级别": "AAAAA级"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "大明宫国家遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "青龙寺遗址公园",
+    "attribute": [
+      {
+        "address": "地址信息",
+        "value": "西安市雁塔区"
+      },
+      {
+        "coordinates": "坐标信息",
+        "value": "34.23497371,108.9845322"
+      },
+      {
+        "类型": "设施类型",
+        "value": "文化遗产用地"
+      },
+      {
+        "建成/发现时间": "建成/发现时间",
+        "value": "遗址公园"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "青龙寺遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "革命公园",
+    "attribute": [
+      {
+        "address": "陕西省西安市新城区西五路53号"
+      },
+      {
+        "coordinates": "34.27306555,108.9537091"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "面积": "10.3公顷"
+      },
+      {
+        "建成/发现时间": "民国十六年（1927年）3月"
+      },
+      {
+        "保护级别": "第八批全国重点文物保护单位"
+      },
+      {
+        "开放时间": "全年全天"
+      },
+      {
+        "文保编号": "8-0729-5-213"
+      },
+      {
+        "区": "新城区"
+      },
+      {
+        "商业区": "西五路"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "全国重点文物保护单位"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "爱国主义教育基地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "革命旧址"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "公众游览地"
+      }
+    ],
+    "source_poi": "革命公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "曲江寒窑遗址公园",
+    "attribute": [
+      {
+        "address": "西安市雁塔区寒窑路18号"
+      },
+      {
+        "coordinates": "34.20019503,108.9865284"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "开放时间": "07:00-21:00"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "占地面积": "60亩"
+      },
+      {
+        "建成/发现时间": "清朝后期"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "曲江寒窑遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "文化广场",
+    "attribute": [
+      {
+        "address": "地址信息"
+      },
+      {
+        "coordinates": "坐标信息"
+      },
+      {
+        "类型": "设施类型"
+      },
+      {
+        "建成/发现时间": "90年代后"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "灞桥区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "文化广场"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "太液池",
+    "attribute": [
+      {
+        "address": "西安市大明宫国家遗址公园内"
+      },
+      {
+        "coordinates": "34.29770869,108.9596674"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "约16000m2"
+      },
+      {
+        "竣工时间": "唐代"
+      },
+      {
+        "别名": "蓬莱池"
+      },
+      {
+        "区": "未央区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "太液池"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安博物院",
+    "attribute": [
+      {
+        "address": "陕西省西安市碑林区友谊西路72号"
+      },
+      {
+        "coordinates": "34.2400671,108.9370457"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "160000m2"
+      },
+      {
+        "建成/发现时间": "唐景龙元年（707年）"
+      },
+      {
+        "投用时间": "2007年5月18日"
+      },
+      {
+        "开放时间": "旺季(3月15日至10月31日)08:30~18:00,17:00停止入园。淡季(11月1日至3月14日)09:00~17:30,16:30停止入园。每周二闭馆"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "藏品数量": "113977件/套(截至2024年)"
+      },
+      {
+        "现任院长": "向德"
+      },
+      {
+        "年参观量": "40.10万人次[31]"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "碑林区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "西安博物院"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "兴庆宫公园",
+    "attribute": [
+      {
+        "address": "西安市碑林区咸宁西路55号"
+      },
+      {
+        "coordinates": "34.25569503,108.979187"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "投用时间": "1958年"
+      },
+      {
+        "面积": "780亩"
+      },
+      {
+        "开放性质": "免费"
+      },
+      {
+        "景点级别": "AAA级"
+      },
+      {
+        "建议游玩时长": "1-2小时"
+      },
+      {
+        "门票价格": "免费开放"
+      },
+      {
+        "开放时间": "08:00-18:30"
+      },
+      {
+        "适宜游玩季节": "四季皆可"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "碑林区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "兴庆宫公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "荐福寺",
+    "attribute": [
+      {
+        "address": "陕西省西安市友谊西路72号"
+      },
+      {
+        "coordinates": "34.2404414,108.9379206"
+      },
+      {
+        "类型": "宗教用地"
+      },
+      {
+        "文保级别": "第一批全国重点文物保护单位"
+      },
+      {
+        "荣誉": "世界文化遗产"
+      },
+      {
+        "景点级别": "AAAA级"
+      },
+      {
+        "开放时间": "09:00—16:00(每周二闭馆)"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "著名景点": "小雁塔,西安博物院"
+      },
+      {
+        "建议游玩时长": "2—3小时"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "区": "碑林区"
+      },
+      {
+        "商业区": "长安路"
+      },
+      {
+        "面积": "1500平方米"
+      },
+      {
+        "建成/发现时间": "唐睿宗文明元年（684年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "碑林区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "宗教用地"
+      },
+      {
+        "relation_type": "has_honor",
+        "entity_type": "honor",
+        "entity_name": "世界文化遗产"
+      },
+      {
+        "relation_type": "has_grade",
+        "entity_type": "grade",
+        "entity_name": "AAAA级"
+      },
+      {
+        "relation_type": "has_monument",
+        "entity_type": "monument",
+        "entity_name": "第一批全国重点文物保护单位"
+      },
+      {
+        "relation_type": "associated_with",
+        "entity_type": "poi",
+        "entity_name": "小雁塔"
+      },
+      {
+        "relation_type": "associated_with",
+        "entity_type": "poi",
+        "entity_name": "西安博物院"
+      },
+      {
+        "relation_type": "has_event",
+        "entity_type": "event",
+        "entity_name": "雁塔晨钟"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "古树名木"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "石碑"
+      }
+    ],
+    "source_poi": "荐福寺"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "明秦王墓",
+    "attribute": [
+      {
+        "address": "陕西省西安市长安区"
+      },
+      {
+        "coordinates": "34.11040308,109.0320352"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "保护级别": "第六批全国重点文物保护单位"
+      },
+      {
+        "编号": "6-0286-2-066"
+      },
+      {
+        "批准单位": "中华人民共和国国务院"
+      },
+      {
+        "建成/发现时间": "明"
+      },
+      {
+        "面积": "8000平方米"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "全国重点文物保护单位"
+      }
+    ],
+    "source_poi": "明秦王墓"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "凤栖山",
+    "attribute": [
+      {
+        "address": "四川省崇州市街子镇"
+      },
+      {
+        "coordinates": "34.13172869,109.0749762"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "开放时间": "全年全天开放"
+      },
+      {
+        "景区级别": "国家3A级"
+      },
+      {
+        "核心景观": "千年金丝楠木群"
+      },
+      {
+        "徒步路线": "康道至光严禅院"
+      },
+      {
+        "毗邻景区": "九龙沟景区"
+      },
+      {
+        "面积": ""
+      },
+      {
+        "建成/发现时间": "隋炀帝大业年间（605-618年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "凤栖山"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安碑林博物馆",
+    "attribute": [
+      {
+        "address": "陕西省西安市碑林区三学街15号"
+      },
+      {
+        "coordinates": "34.25547235,108.948205"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "占地面积": "31900m2"
+      },
+      {
+        "投用时间": "1944年"
+      },
+      {
+        "开放时间": "淡季(12月1日一2月底)售票时间:8:00一17:15,18:00闭馆。旺季(3月1日一11月30日)售票时间:8:00一17:45,18:30闭馆。"
+      },
+      {
+        "门票价格": "全票:85元/人次,半票:42元/人次"
+      },
+      {
+        "藏品数量": "14338件/套(截至2024年)"
+      },
+      {
+        "建筑布局": "孔庙、碑林、石刻艺术室和石刻艺术馆"
+      },
+      {
+        "展览区域": "第一展室、第二展室、第三展室、第四展室、第五展室、第六展室、第七展室"
+      },
+      {
+        "石刻艺术馆主题": "长安佛韵"
+      },
+      {
+        "馆藏文物": "汉《曹全碑》、颜真卿《多宝塔碑》、唐太宗昭陵六骏石刻等"
+      },
+      {
+        "荣誉": "第一批国家一级博物馆"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "碑林区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "institution",
+        "entity_name": "博物馆"
+      },
+      {
+        "relation_type": "has_collection",
+        "entity_type": "artifact",
+        "entity_name": "碑石"
+      },
+      {
+        "relation_type": "has_collection",
+        "entity_type": "artifact",
+        "entity_name": "墓志"
+      },
+      {
+        "relation_type": "has_collection",
+        "entity_type": "artifact",
+        "entity_name": "石刻造像"
+      },
+      {
+        "relation_type": "has_event",
+        "entity_type": "event",
+        "entity_name": "研学实践教育基地"
+      },
+      {
+        "relation_type": "has_event",
+        "entity_type": "event",
+        "entity_name": "世界文化遗产项目预备名单"
+      }
+    ],
+    "source_poi": "西安碑林博物馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "杜陵",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区曲江街道三兆村南"
+      },
+      {
+        "coordinates": "34.18267216,109.021485"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "约120亩"
+      },
+      {
+        "建成/发现时间": "元康元年（前65年）"
+      },
+      {
+        "开放时间": "全年09:00-20:00(最晚入园17:00)"
+      },
+      {
+        "门票价格": "35元"
+      },
+      {
+        "保护级别": "第三批全国重点文物保护单位"
+      },
+      {
+        "编号": "3-0234-6-005"
+      },
+      {
+        "批准单位": "中华人民共和国国务院"
+      },
+      {
+        "时代": "西汉"
+      },
+      {
+        "陵墓主人": "汉宣帝刘询"
+      },
+      {
+        "陪葬墓数量": "107座"
+      },
+      {
+        "陵邑名称": "杜陵邑"
+      },
+      {
+        "遗址特点": "保存较好，规模较大"
+      },
+      {
+        "历史信息": "始建于元康元年（前65年），初元元年（前48年）汉宣帝葬此"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_mine",
+        "entity_type": "陵墓",
+        "entity_name": "汉宣帝刘询陵墓"
+      },
+      {
+        "relation_type": "has_tomb",
+        "entity_type": "tomb",
+        "entity_name": "王皇后陵墓"
+      },
+      {
+        "relation_type": "has_tomb",
+        "entity_type": "tomb",
+        "entity_name": "许皇后陵墓"
+      },
+      {
+        "relation_type": "has_relic",
+        "entity_type": "relic",
+        "entity_name": "陪葬坑"
+      },
+      {
+        "relation_type": "has_relic",
+        "entity_type": "relic",
+        "entity_name": "陪葬墓"
+      },
+      {
+        "relation_type": "has_site",
+        "entity_type": "archaeological_site",
+        "entity_name": "杜陵遗址公园"
+      },
+      {
+        "relation_type": "has_culture",
+        "entity_type": "culture",
+        "entity_name": "汉代文化"
+      }
+    ],
+    "source_poi": "杜陵"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大唐西市",
+    "attribute": [
+      {
+        "address": "西安市莲湖区"
+      },
+      {
+        "coordinates": "34.2479991,108.9033531"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "建成/发现时间": "隋（公元581—617年）"
+      },
+      {
+        "开放时间": "全天"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "著名景点": "大唐西市博物馆"
+      },
+      {
+        "建议游玩时长": "3-4小时"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "部门": "西安市政府"
+      },
+      {
+        "计划": "皇城复兴计划"
+      },
+      {
+        "面积": "1600亩"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "莲湖区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "唐长安城西市"
+      }
+    ],
+    "source_poi": "大唐西市"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "秦二世陵遗址公园",
+    "attribute": [
+      {
+        "address": "曲江池遗址公园南岸"
+      },
+      {
+        "coordinates": "34.19411882,108.9797581"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "占地面积": "约70亩"
+      },
+      {
+        "建筑面积": "4714m2"
+      },
+      {
+        "园区布局": "展示馆区和遗址区"
+      },
+      {
+        "设计单位": "日清设计"
+      },
+      {
+        "建成/发现时间": ""
+      },
+      {
+        "开放时间": "周二至周日9:00-17:00（16:30停止入馆），每周一闭馆"
+      },
+      {
+        "门票": "免费"
+      },
+      {
+        "百科标签": "位于曲江池遗址公园南岸的公园"
+      },
+      {
+        "百科摘要": "秦二世陵遗址公园位于曲江新区曲江池遗址公园南岸，占地面积约70亩，建筑面积4714平方米，总投资2亿元建设。该公园以秦二世胡亥墓为核心，由展示馆区和遗址区组成，建筑风格融入秦风特色，采用深灰色洞石砌块及直线、几何等设计手法，由日清设计承担整体设计。展示馆区包含秦殇展览馆和曲江新区出土文物精品展馆，通过声光电技术展示秦代兴衰史；遗址区保留山门、大殿、墓冢等历史建筑，墓冢封土堆直径25米，高5米。公园以秦亡警示文化与秦文明反思文化为主题，构建“秋声寒苑”“阙望南山”“指鹿为马”“秦风拾忆”等秦风主题文化景观，形成集遗址保护、文化展陈、园林绿化于一体的秦风园林体系。"
+      },
+      {
+        "交通方式": "地铁8号线外环寒窑站C口出步行或骑共享单车"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "part_of",
+        "entity_type": "poi",
+        "entity_name": "曲江池遗址公园"
+      },
+      {
+        "relation_type": "designed_by",
+        "entity_type": "organization",
+        "entity_name": "日清设计"
+      }
+    ],
+    "source_poi": "秦二世陵遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "文景山公园",
+    "attribute": [
+      {
+        "address": "陕西省西安市未央区西安北站北广场东北侧"
+      },
+      {
+        "coordinates": "34.38619485,108.9388144"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "开放时间": "全年:周一至周日00:00-24:00"
+      },
+      {
+        "占地面积": "439.5m2"
+      },
+      {
+        "森林公园级别": "市级园林"
+      },
+      {
+        "景点特色": "利用建筑渣土造山成园"
+      },
+      {
+        "建议游玩时长": "2-4小时"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "文景山公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "文景公园",
+    "attribute": [
+      {
+        "address": "文景北路与凤城三路西南角"
+      },
+      {
+        "coordinates": "34.32308232,108.9310543"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成/发现时间": "未知"
+      },
+      {
+        "面积": "未知"
+      },
+      {
+        "商业区": "[]"
+      },
+      {
+        "百科标签": "[]"
+      },
+      {
+        "百科摘要": "[]"
+      },
+      {
+        "百科历史信息": "[]"
+      },
+      {
+        "交通": "地铁4号线凤城十路站换乘公交600路或723路直达；地铁14号线文景山公园站A出口也能到。"
+      },
+      {
+        "绿化": "70多种植物，乔木、灌木、水生植物、草坪"
+      },
+      {
+        "景观": "环山河系、人工湖、生态湿地，山水相依，瀑布和码头"
+      },
+      {
+        "人文景观": "山顶的文景阁是纯木结构阁楼，三层高，能俯瞰整个公园和西安北站"
+      },
+      {
+        "儿童娱乐设施": "2处"
+      },
+      {
+        "历史价值": "西汉王夫人墓（汉武帝刘彻之孙史皇孙刘进的夫人王翁须）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "西汉王夫人墓"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "交通便利"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "免费开放"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "全年全天营业"
+      }
+    ],
+    "source_poi": "文景公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "唐城墙公园",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区唐城墙遗址公园"
+      },
+      {
+        "coordinates": "34.21216015,108.9883525"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "面积": "540亩"
+      },
+      {
+        "建成/发现时间": "唐代"
+      },
+      {
+        "商业区": "沣惠南路"
+      },
+      {
+        "区": "雁塔区"
+      },
+      {
+        "百科标题": ""
+      },
+      {
+        "百科标签": ""
+      },
+      {
+        "百科摘要": ""
+      },
+      {
+        "百科历史信息": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "城市公园"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化旅游地"
+      }
+    ],
+    "source_poi": "唐城墙公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "曲江池遗址公园",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区曲江池西路与曲江池北路交叉口"
+      },
+      {
+        "coordinates": "34.20186035,108.9794302"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "开放时间": "全天开放"
+      },
+      {
+        "景点级别": "AAAAA级"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "占地面积": "1500亩"
+      },
+      {
+        "建成/发现时间": "2008年7月1日"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "阅江楼"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "畅观楼"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "feature",
+        "entity_name": "烟波岛"
+      }
+    ],
+    "source_poi": "曲江池遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安市工人文化宫",
+    "attribute": [
+      {
+        "address": "西安市南院门"
+      },
+      {
+        "coordinates": "34.26477,108.90617"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "占地面积": "2980.4m2"
+      },
+      {
+        "投用时间": "1953年"
+      },
+      {
+        "曾用名": "西安原市委礼堂、陕西大礼堂"
+      },
+      {
+        "区": "莲湖区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "莲湖区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "西安市工人文化宫"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "孔门七十二贤",
+    "attribute": [
+      {
+        "address": "未提供"
+      },
+      {
+        "coordinates": "34.23939085,108.9601818"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成/发现时间": "未提供"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "孔门七十二贤"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "八里原",
+    "attribute": [
+      {
+        "address": "陕西省蓝田县与长安区交界处"
+      },
+      {
+        "coordinates": "34.07841896,109.1633067"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "海拔范围": "590-680米"
+      },
+      {
+        "塬体长度": "约9公里"
+      },
+      {
+        "塬面宽度": "1.5-2.7公里"
+      },
+      {
+        "主要水系": "库峪河、汤峪河"
+      },
+      {
+        "面积": "3.8平方公里"
+      },
+      {
+        "建成/发现时间": ""
+      },
+      {
+        "百科标签": "陕西省蓝田县与长安区间的黄土台塬"
+      },
+      {
+        "百科摘要": "八里原位于陕西省蓝田县与长安区交界处，地处库峪河与浐河支流汤峪河之间，呈东南-西北走向延伸约9公里。该塬面海拔590-680米，宽1.5-2.7公里，属秦岭北麓黄土覆盖的三级阶地，由河流长期侵蚀切割形成。塬体西北侧倾斜明显，因形似巨蟒横卧河谷得名\"咀头塬\"，现存唐代皇室墓园遗迹。"
+      },
+      {
+        "百科历史信息": "八里原横亘于库峪河与浐河支流汤峪河之间，东南起自蓝田县骆驼岭村，西北延伸至长安区鸣犊镇嘴头村。塬体主体位于蓝田县汤峪镇（原史家寨镇）辖区，西侧与长安区杨庄、引镇等地接壤。该地貌形成于第四纪黄土堆积期，现存形态为河流侵蚀切割残留的三级阶地。塬面呈阶梯状台地特征，西北侧较东南侧低约90米，形成5%-8%自然坡度。地质剖面显示：表层为10-15米马兰黄土，中部夹有古土壤层，底部为河流冲积砂砾层。因塬头形似巨蟒吐信，当地民间又称\"咀头塬\"。实测数据显示塬顶至河谷高差50-100米，形成典型黄土崖壁地貌。汉代在此设置离宫遗址，2010年代考古发现包含：大型夯土建筑基址，绳纹板瓦残片，五铢钱币窖藏。唐代成为皇室墓区选址，现存遗迹包括：乾符年间墓志铭石刻，莲花纹砖砌墓道。现代开发播报编辑2019年穿越路线显示敬骆路仍为塬区主要通道，连接骆驼岭村与敬家村。2023年规划建设项目包含：蓝田航空产业园（规划面积3.8平方公里），通用机场跑道（设计长度1200米），航空科普教育基地。现有基础设施包括三连亭观景台、混凝土台阶步道等旅游设施。自然生态播报编辑塬顶保留传统农耕区，主要种植：冬小麦（占耕地面积70%），油菜（轮作作物），耐旱果树。自然植被以酸枣树、狗尾草等旱生植物为主，崖壁分布有：侧柏天然次生林，野生葛藤群落，岩鸽栖息洞穴。2019年实地考察记录显示，春季塬区可见连片油菜花田与野生紫花地丁群落。"
+      },
+      {
+        "自然植被": "酸枣树、狗尾草等旱生植物，侧柏天然次生林，野生葛藤群落，岩鸽栖息洞穴"
+      },
+      {
+        "主要种植": "冬小麦，油菜，耐旱果树"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "蓝田县汤峪镇"
+      },
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "临潼区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "黄土台塬"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "三级阶地"
+      }
+    ],
+    "source_poi": "八里原"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "赵公明财神庙",
+    "attribute": [
+      {
+        "address": "陕西省西安市周至县S108"
+      },
+      {
+        "coordinates": "34.07770801,108.3375246"
+      },
+      {
+        "类型": "宗教用地"
+      },
+      {
+        "开放时间": "全年09:00-18:00"
+      },
+      {
+        "门票价格": "景区门票:60元/人官方网络票:50元/人"
+      },
+      {
+        "著名景点": "财神殿、问道阁"
+      },
+      {
+        "适宜游玩季节": "春季、夏季、秋季"
+      },
+      {
+        "面积": "531亩"
+      },
+      {
+        "建成/发现时间": ""
+      },
+      {
+        "百科标题": "赵公明财神庙"
+      },
+      {
+        "百科标签": "陕西省西安市周至县的景点"
+      },
+      {
+        "百科摘要": "赵公明财神庙是位于陕西省西安市周至县S108的景点，开放时间是全年 09:00-18:00。赵公明财神文化景区坐落于财神赵公明故里，陕西周至县 集贤镇 赵代村，赵公明财神文化景区建设有核心建筑院落三进财神殿，包括赐福殿、财神殿和三霄殿。在财神殿东西南北都建有赵公明统帅的四路财神偏殿，四周的偏殿和小庙供奉有妈祖、黄大仙、关羽，文财神、武财神，华夏众多的财神构成了一个比较完整的众神体系，是民俗吉祥福神的综合展示园区。"
+      },
+      {
+        "百科历史信息": "寺庙介绍播报编辑赵公明财神庙华夏第一财神赵公明演绎陕西新传奇赵公明财神庙“华夏第一正财神赵公明”的正殿，沿着台阶一路向上，可登上正殿四层，里面主要供奉着“中路财神（华夏正财神）-赵公明”。在道教的神仙谱中，赵公明是五方诸神之一，就是阴阳之神。他头戴黑铁冠，手执玄铁鞭，黑方脸，满嘴的大胡子，骑着一匹黑虎，形象异常威猛。他与招宝天尊萧升、纳珍天尊曹宝、招财使者陈九公、利市仙官姚少司合称五路财神。赵公明，姓赵名朗，亦称玄朗，字公明，又称赵玄坛（玄坛”是指道教的斋坛，也有护法之意。）长安周至县赵大村人士，为“金龙如意正一龙虎玄坛真君”， 简称「玄坛真君」，统帅「招宝天尊萧升」、「纳珍天尊曹宝」、「招财使者陈九公」、「利市仙官姚少司」四位神仙，专司金银财宝，迎祥纳福。后来，中国民间认为赵公明手下所掌管四名与财富有关的小神，其分别是招宝、纳珍、招财和利市，因而成为财神。由此，赵公明才开始掌管天下财富，成为华夏正财神。赵公明财神庙在遗址上进行扩建，除供奉华夏正财神赵公明，还有中国民间广为流传的文财神范蠡比干，武财神关公、东西南北四路财神，妈祖、黄大仙等，将中国各地区受人们尊敬和爱戴的财神都集中于景区，以众神传说丰富财富文化。"
+      },
+      {
+        "周边景点": "楼观台"
+      },
+      {
+        "交通信息": "赵公明财神庙景区距西安城区70公里，行车约1个小时。自驾：1、由子午大道至关中环线向西行至赵公明财神庙景区；2、由西万公路至关中环线向西行至赵公明财神庙景区；3、由西安绕城高速经西汉高速至涝峪口下，向西行至赵公明财神庙景区。公交：1、钟楼——大雁塔北广场——赵公明财神庙 乘坐K606、K609、游8（610）到大雁塔北广场下车后转乘西安环山旅游公交一号线2、火车站——大雁塔北广场——赵公明财神庙 乘坐K5、30、41、500、游6、游8（610）到大雁塔北广场下车后转乘西安环山旅游公交一号线3、机场——大雁塔北广场——赵公明财神庙地图信息播报编辑赵公明文化景区"
+      },
+      {
+        "法定保护": "陕西省重点文物保护单位"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "周至县"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "宗教用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "景区"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "scenic_spot",
+        "entity_name": "财神殿"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "scenic_spot",
+        "entity_name": "问道阁"
+      },
+      {
+        "relation_type": "has_feature",
+        "entity_type": "historical_site",
+        "entity_name": "赵公明财神庙"
+      },
+      {
+        "relation_type": "has_cultural_value",
+        "entity_type": "cultural_site",
+        "entity_name": "民俗文化"
+      },
+      {
+        "relation_type": "has_cultural_value",
+        "entity_type": "cultural_site",
+        "entity_name": "道教文化"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "百科标签"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "百科摘要"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "百科历史信息"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "法定保护"
+      }
+    ],
+    "source_poi": "赵公明财神庙"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "丝路欢乐世界",
+    "attribute": [
+      {
+        "address": "西安地铁五号线沣西文化公园站西南侧"
+      },
+      {
+        "coordinates": "34.06187126,108.3074318"
+      },
+      {
+        "类型": "文化产业用地"
+      },
+      {
+        "建成/发现时间": "2023年4月28日"
+      },
+      {
+        "占地面积": "567亩"
+      },
+      {
+        "商业区": "西咸新区"
+      },
+      {
+        "区": "长安区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      },
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "西咸新区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化产业用地"
+      }
+    ],
+    "source_poi": "丝路欢乐世界"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "阿房宫考古遗址公园",
+    "attribute": [
+      {
+        "address": "西安市沣东新城阿房宫遗址"
+      },
+      {
+        "coordinates": "34.26433383,108.8082873"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "面积": "12.59平方公里"
+      },
+      {
+        "主题": "国家统一,民族团结"
+      },
+      {
+        "建成/发现时间": "1961年"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "locate_in",
+        "entity_type": "commercial_district",
+        "entity_name": "西咸新区"
+      }
+    ],
+    "source_poi": "阿房宫考古遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "乐游原",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区"
+      },
+      {
+        "coordinates": "34.23470744,108.9844594"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "面积": ""
+      },
+      {
+        "建成/发现时间": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "乐游原"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大明宫圣远广场",
+    "attribute": [
+      {
+        "address": "西安市新城区龙首北路与建强路交汇处"
+      },
+      {
+        "coordinates": "34.29487319,108.9498063"
+      },
+      {
+        "类型": "商住综合体"
+      },
+      {
+        "总建面积": "17万平方米"
+      },
+      {
+        "占地面积": "36018平方米"
+      },
+      {
+        "容积率": "3.24"
+      },
+      {
+        "物业公司": "戴德梁行西安"
+      },
+      {
+        "车位配比": "1:100"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "建成/发现时间": "2015年10月"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "商住综合体"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      }
+    ],
+    "source_poi": "大明宫圣远广场"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "中国周城",
+    "attribute": [
+      {
+        "address": "周至县竹峪镇鸭沟岭张龙村"
+      },
+      {
+        "coordinates": "34.11230056,108.0399741"
+      },
+      {
+        "类型": "文化遗产用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "周至县"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "中国周城"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "中国电影资料馆西安电影资料库",
+    "attribute": [
+      {
+        "address": "临潼区"
+      },
+      {
+        "coordinates": "34.36837278,109.238684"
+      },
+      {
+        "类型": "文化设施用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "临潼区"
+      }
+    ],
+    "source_poi": "中国电影资料馆西安电影资料库"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "曲江文化运动公园",
+    "attribute": [
+      {
+        "address": "西安.曲江新区"
+      },
+      {
+        "coordinates": "34.18378495,108.9850493"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "开放时间": "不限"
+      },
+      {
+        "门票价格": "无"
+      },
+      {
+        "占地面积": "13.1万平方米"
+      },
+      {
+        "所属": "陕西省"
+      },
+      {
+        "建成/发现时间": "2017年10月"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "曲江文化运动公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "长安公园",
+    "attribute": [
+      {
+        "address": "石家庄市中山东路205号"
+      },
+      {
+        "coordinates": "34.14398818,108.9075851"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "占地面积": "363.5m2"
+      },
+      {
+        "始建时间": "1955年5月"
+      },
+      {
+        "水域面积": "90亩"
+      },
+      {
+        "区": "长安区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      }
+    ],
+    "source_poi": "长安公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "文华阁",
+    "attribute": [
+      {
+        "address": "滨湖新区西藏路与洞庭湖路交汇处西200米"
+      },
+      {
+        "coordinates": "34.23165545,108.8884315"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "建成/发现时间": "2012年"
+      },
+      {
+        "面积": "1.33万平方米"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "滨湖区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "住宅"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产"
+      }
+    ],
+    "source_poi": "文华阁"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "隋大兴唐长安城明德门遗址公园",
+    "attribute": [
+      {
+        "address": "西安市雁塔区"
+      },
+      {
+        "coordinates": "34.2064897,108.9355516"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "建成/发现时间": "隋开皇二年（公元582年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      }
+    ],
+    "source_poi": "隋大兴唐长安城明德门遗址公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安市大雁塔-大唐芙蓉园景区",
+    "attribute": [
+      {
+        "address": "陕西省西安市曲江新区"
+      },
+      {
+        "coordinates": "34.22262932,108.9594753"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "景点级别": "AAAAA级"
+      },
+      {
+        "占地面积": "3.8km2"
+      },
+      {
+        "建成/发现时间": "贞观二十二年（648）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      }
+    ],
+    "source_poi": "西安市大雁塔-大唐芙蓉园景区"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "杨虎城将军烈士陵园",
+    "attribute": [
+      {
+        "address": "西安市长安县韦曲街道双竹村"
+      },
+      {
+        "coordinates": "34.14647075,108.9501059"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "类别": "中国文化遗产"
+      },
+      {
+        "景点级别": "AAA级"
+      },
+      {
+        "投用时间": "1950年"
+      },
+      {
+        "荣誉": "3A级景区、西安重点文物保护单位"
+      },
+      {
+        "文化古迹": "杨虎城将军墓"
+      },
+      {
+        "名称": "杨虎城将军陵园"
+      },
+      {
+        "面积": ""
+      },
+      {
+        "建成/发现时间": "1950年"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "中国文化遗产"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "AAA级景区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "西安重点文物保护单位"
+      }
+    ],
+    "source_poi": "杨虎城将军烈士陵园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "御花园",
+    "attribute": [
+      {
+        "address": "北京市东城区景山前街4号北京故宫内"
+      },
+      {
+        "coordinates": "34.2200495,108.9643732"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "12015m2"
+      },
+      {
+        "开放时间": "全年实行周一闭馆。每年4月1日至10月31日:8:30—17:00(16:10停止入馆);每年11月1日至来年3月31日:8:30—15:40(16:30停止入馆)"
+      },
+      {
+        "建成/发现时间": "明永乐十八年（1420年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "东城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "御花园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大雁塔南广场",
+    "attribute": [
+      {
+        "address": "大慈恩寺正前方"
+      },
+      {
+        "coordinates": "34.21742188,108.9594503"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成时间": "2001年初"
+      },
+      {
+        "占地面积": "32.6亩"
+      },
+      {
+        "核心景观": "玄奘青铜雕像"
+      },
+      {
+        "开放时间": "全天开放"
+      },
+      {
+        "公交线路": "19/21/22/23等11条线路可达"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "大雁塔南广场"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大唐不夜城",
+    "attribute": [
+      {
+        "address": "中国陕西省西安市雁塔区慈恩路46号"
+      },
+      {
+        "coordinates": "34.21208308,108.9594107"
+      },
+      {
+        "类型": "大型仿唐建筑群步行街"
+      },
+      {
+        "开放时间": "全天开放"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "占地面积": "9360000m2"
+      },
+      {
+        "建筑面积": "650000m2"
+      },
+      {
+        "始建时间": "2002年8月"
+      },
+      {
+        "景区类型": "文化精神标识地"
+      },
+      {
+        "区": "雁塔区"
+      },
+      {
+        "商业区": "[]"
+      },
+      {
+        "百科标题": "大唐不夜城"
+      },
+      {
+        "百科标签": "中国陕西省西安市地标性景区"
+      },
+      {
+        "百科摘要": "大唐不夜城，位于陕西省西安市雁塔区的大雁塔脚下，为中国唯一一个以盛唐文化为背景的大型仿唐建筑群步行街，为西安地标性景区。其总占地936万平方米，总建筑面积65万平方米，南北长2100米，东西宽500米，北起大雁塔南广场，南至唐城墙遗址，东起慈恩东路，西至慈恩西路。2002年8月，大唐不夜城正式开建。2009年4月，大唐不夜城点亮工程启动。次年9月26日，开元广场建成开放，开元盛世及武后行从两大主题雕塑落成。2018年底，大唐不夜城成为中国11条步行街改造提升试点之一。12月25日，大唐步行街正式开街。2022年4月30日，“长安十二时辰”主题街区正式开街。此后，大唐不夜城不断提升街区品质，致力于打造世界级文化IP旅游休闲街区，已经形成“一轴·两市·三核·四区·五内街”总体布局。大唐不夜城以盛唐文化为背景，以唐风元素为主线，建有贞观广场、开元广场、大雁塔南广场等主要广场以及万国来朝、贞观纪念碑、唐历史文化浮雕柱等主题雕塑。大唐不夜城发展“夜经济”的精神内核为深邃的历史文化内涵。大唐不夜城作为西安的地标性街区和西安名片，自建成后，被国家部委确认为“国家旅游科技示范园区试点”以及“第一批国家级夜间文旅消费集聚区”。2020年7月，大唐不夜城步行街入选首批中国示范步行街名单。2021年大唐不夜城总客流8000万人次，综合收入达85亿，其全网总曝光量百亿，创造超1000余个就业岗位。2025年10月，获评首批“陕西省商旅名街”。"
+      },
+      {
+        "面积": "9360000m2"
+      },
+      {
+        "建成/发现时间": "2002年8月"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "大型仿唐建筑群步行街"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家旅游科技示范园区试点"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "第一批国家级夜间文旅消费集聚区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "中国示范步行街"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "陕西省商旅名街"
+      }
+    ],
+    "source_poi": "大唐不夜城"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大雁塔休闲文化景区",
+    "attribute": [
+      {
+        "address": "中国陕西省西安市雁塔区大慈恩寺内"
+      },
+      {
+        "coordinates": "34.22037491,108.9598993"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "建成/发现时间": "唐高宗年间（652年）"
+      },
+      {
+        "历史信息": "最初为玄奘保存佛经而建，后加盖至九层，现存七层"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      },
+      {
+        "relation_type": "contains",
+        "entity_type": "poi",
+        "entity_name": "大慈恩寺"
+      },
+      {
+        "relation_type": "associated_with",
+        "entity_type": "event",
+        "entity_name": "玄奘取经"
+      },
+      {
+        "relation_type": "associated_with",
+        "entity_type": "event",
+        "entity_name": "佛经翻译"
+      }
+    ],
+    "source_poi": "大雁塔休闲文化景区"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "塔林",
+    "attribute": [
+      {
+        "address": "爱沙尼亚首都"
+      },
+      {
+        "coordinates": "34.21961978,108.9599626"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "行政区类别": "首都"
+      },
+      {
+        "所属地区": "爱沙尼亚"
+      },
+      {
+        "地理位置": "北纬59°22’，东经24°48’"
+      },
+      {
+        "面积": "158.3km2"
+      },
+      {
+        "下辖地区": "基斯加宁区基利斯特宁区拉斯拿马尔区麦斯塔马尔区诺姆尔区比力塔区邦查-塔林区"
+      },
+      {
+        "电话区号": "372"
+      },
+      {
+        "气候条件": "受海洋影响"
+      },
+      {
+        "著名景点": "塔林历史中心"
+      },
+      {
+        "时区": "+2时区UTC/GMT+2个小时"
+      },
+      {
+        "人口数量": "45.8万(2024年)"
+      },
+      {
+        "平均温度": "4.7°C"
+      },
+      {
+        "建成/发现时间": "13世纪"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "塔林"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "陕西戏曲大观园",
+    "attribute": [
+      {
+        "address": "西安市雁塔区大雁塔北广场东侧"
+      },
+      {
+        "coordinates": "34.22176944,108.9626369"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "开放时间": "全天候开放"
+      },
+      {
+        "占地面积": "未明确标注(属广场配套景观)"
+      },
+      {
+        "核心主题": "陕西戏曲文化与雕塑艺术"
+      },
+      {
+        "代表剧种": "秦腔、弦板腔、眉户戏"
+      },
+      {
+        "艺术形式": "雕塑群组+音视频装置+园林景观"
+      },
+      {
+        "百科标题": "陕西戏曲大观园"
+      },
+      {
+        "百科标签": "西安市大雁塔北广场东侧的戏曲主题文化公园"
+      },
+      {
+        "百科摘要": "陕西戏曲大观园位于大雁塔北广场东侧，是以陕西地方戏曲文化为核心的主题公园"
+      },
+      {
+        "百科历史信息": "园区地处大雁塔北广场东侧，紧邻唐大慈恩寺遗址公园。整体呈东西向带状分布，与大雁塔北广场直线距离不足200米。空间布局包含戏曲雕塑展示区、绿植休憩区、文化长廊体验区三大功能模块，配备夜间景观照明系统"
+      },
+      {
+        "雕塑与景观设计": "艺术创作融合多种表现手法：地面浮雕：以戏曲服饰纹样为原型设计地景铺装；互动装置：设置带音频播放功能的戏曲知识解说牌；民俗元素：路灯基座融入马勺脸谱图案，休憩座椅设计为传统戏台造型；动态景观：中心喷泉区与戏曲主题雕塑形成动静结合的艺术效果"
+      },
+      {
+        "文化活动与互动体验": "日常运营中形成两种特色文化活动：群众自发性活动：秦腔爱好者定期聚集进行自乐班表演；非遗展示活动：开展合阳提线木偶、弦板腔皮影戏等民间艺术展演互动体验区设置杖头木偶操作台，游客可亲身参与《孙悟空三打白骨精》等经典剧目片段演绎"
+      },
+      {
+        "游客评价与建议": "根据2025年整合的游客反馈：优势评价：94%游客认可其文化展示价值，特别称赞雕塑服装色彩的视觉冲击力；改进建议：部分游客提出需增加戏曲背景音乐系统，建议增设戏曲文化展示空间；游览提示：76%的评论推荐将此处与大雁塔、陕西历史博物馆串联游览，建议傍晚时段参观以观赏灯光效果"
+      },
+      {
+        "地图信息": "陕西戏曲大观园"
+      },
+      {
+        "面积": "未明确标注(属广场配套景观)"
+      },
+      {
+        "建成/发现时间": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      },
+      {
+        "relation_type": "core_theme",
+        "entity_type": "theme",
+        "entity_name": "陕西戏曲文化与雕塑艺术"
+      },
+      {
+        "relation_type": "represents",
+        "entity_type": "genre",
+        "entity_name": "秦腔"
+      },
+      {
+        "relation_type": "represents",
+        "entity_type": "genre",
+        "entity_name": "弦板腔"
+      },
+      {
+        "relation_type": "represents",
+        "entity_type": "genre",
+        "entity_name": "眉户戏"
+      },
+      {
+        "relation_type": "art_form",
+        "entity_type": "form",
+        "entity_name": "雕塑群组"
+      },
+      {
+        "relation_type": "art_form",
+        "entity_type": "form",
+        "entity_name": "音视频装置"
+      },
+      {
+        "relation_type": "art_form",
+        "entity_type": "form",
+        "entity_name": "园林景观"
+      },
+      {
+        "relation_type": "located_next_to",
+        "entity_type": "poi",
+        "entity_name": "唐大慈恩寺遗址公园"
+      },
+      {
+        "relation_type": "part_of",
+        "entity_type": "tourism_area",
+        "entity_name": "大雁塔文化休闲景区"
+      }
+    ],
+    "source_poi": "陕西戏曲大观园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "终南山（兵马营）",
+    "attribute": [
+      {
+        "address": "蓝田县汤峪"
+      },
+      {
+        "coordinates": "33.8445959,108.6468672"
+      },
+      {
+        "类型": "纪念用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "蓝田县"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "终南山（兵马营）"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "深圳凤凰山森林公园",
+    "attribute": [
+      {
+        "address": "广东省深圳市宝安区福永街道凤凰村"
+      },
+      {
+        "coordinates": "33.9739594,108.4960402"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "面积": "约24.8平方千米"
+      },
+      {
+        "气候带": "亚热带季风气候"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "海拔": "376m"
+      },
+      {
+        "开放时间": "6:00-19:00"
+      },
+      {
+        "建成/发现时间": "2006年"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "宝安区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "森林公园"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "深圳凤凰山森林公园"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "首阳山",
+    "attribute": [
+      {
+        "address": "定西市渭源县莲峰镇古迹坪村"
+      },
+      {
+        "coordinates": "33.9363437,108.434902"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成/发现时间": ""
+      },
+      {
+        "海拔": "2186--2509米之间"
+      },
+      {
+        "气候条件": "温带大陆性气候"
+      },
+      {
+        "开放时间": "09:00-17:00"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "占地面积": "198公顷"
+      },
+      {
+        "著名景点": "石门夜月、天井峡、天井画廊"
+      },
+      {
+        "植被类型": "寒温带针叶林"
+      },
+      {
+        "适宜游玩季节": "四季皆可"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "周至县"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "首阳山"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "渼陂湖",
+    "attribute": [
+      {
+        "address": "西安市鄠邑区"
+      },
+      {
+        "coordinates": "34.11626216,108.575028"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "面积": "2156亩"
+      },
+      {
+        "建成/发现时间": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "鄠邑区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "渼陂湖(meibei)"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "秦兵马俑一号坑",
+    "attribute": [
+      {
+        "address": "陕西省西安市临潼区秦始皇陵"
+      },
+      {
+        "coordinates": "34.38496603,109.2731572"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "建成/发现时间": "秦朝"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "临潼区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "秦兵马俑一号坑"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "秦始皇帝陵博物院",
+    "attribute": [
+      {
+        "address": "陕西省西安市临潼区"
+      },
+      {
+        "coordinates": "34.38612275,109.2754475"
+      },
+      {
+        "类型": "历史博物馆"
+      },
+      {
+        "景点级别": "AAAAA级"
+      },
+      {
+        "开放时间": "3月16日-11月15日08:30-17:00;11月16日-次年3月15日08:30-16:30"
+      },
+      {
+        "门票价格": "120元/人"
+      },
+      {
+        "竣工时间": "2009年02月11日"
+      },
+      {
+        "馆藏精品": "兵马俑、铜车马、百戏俑、青铜兵器"
+      },
+      {
+        "建议游玩时长": "2—3小时"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "现任院长": "李岗"
+      },
+      {
+        "所属部门": "中华人民共和国文化部"
+      },
+      {
+        "官方电话": "029-81399127,029-81399001"
+      },
+      {
+        "全部藏品": "7585件(套)"
+      },
+      {
+        "年参观量": "111.39万人次"
+      },
+      {
+        "类型": "纪念用地"
+      },
+      {
+        "区": "临潼区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "临潼区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "历史博物馆"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "AAAAA级景区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家一级博物馆"
+      }
+    ],
+    "source_poi": "秦始皇帝陵博物院"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "陕西历史博物馆",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区小寨东路91号"
+      },
+      {
+        "coordinates": "34.22575435,108.9503358"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "建成时间": "1991年6月20日"
+      },
+      {
+        "馆藏文物数量": "170余万件(组)"
+      },
+      {
+        "博物馆等级": "国家一级博物馆"
+      },
+      {
+        "开放时间": "冬季(11月15日—3月14日)9:30—17:00(16:00停止入场);夏季(3月15日—11月14日)8:30—18:00(16:30停止入场);每周一闭馆(国家法定假日除外)"
+      },
+      {
+        "门票价格": "免费,凭有效证件换票参观"
+      },
+      {
+        "建议游玩时长": "2—3小时"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "现任馆长": "庞雅妮"
+      },
+      {
+        "总设计师": "张锦秋"
+      },
+      {
+        "举办单位": "陕西省文物局"
+      },
+      {
+        "区": "雁塔区"
+      },
+      {
+        "面积": "6.5万平方米"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_collection",
+        "entity_type": "collection",
+        "entity_name": "商周青铜器,历代陶俑,汉唐金银器,唐墓壁画"
+      },
+      {
+        "relation_type": "has_museum_level",
+        "entity_type": "museum_level",
+        "entity_name": "国家一级博物馆"
+      }
+    ],
+    "source_poi": "陕西历史博物馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "终南山",
+    "attribute": [
+      {
+        "address": "陕西省西安市"
+      },
+      {
+        "coordinates": "33.9243535,109.0455496"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "面积": "4851平方千米"
+      },
+      {
+        "荣誉": "仙都、洞天之冠、天下第一福地"
+      },
+      {
+        "景点级别": "国家AAAA级旅游景区"
+      },
+      {
+        "著名景点": "翠华山、骊山、楼观台"
+      },
+      {
+        "坐标": "33.9243535,109.0455496"
+      },
+      {
+        "区": "长安区"
+      },
+      {
+        "走向": "东西走向"
+      },
+      {
+        "长度": "约230km"
+      },
+      {
+        "宽度": "最宽处55千米,最窄处15千米"
+      },
+      {
+        "起点": "西安市蓝田县杨家堡"
+      },
+      {
+        "终点": "周至县秦岭主峰太白山南梁梁脊"
+      },
+      {
+        "主峰": "太白山"
+      },
+      {
+        "建成/发现时间": ""
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "长安区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家AAAA级旅游景区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家森林公园"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "国家自然保护区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "世界地质公园"
+      }
+    ],
+    "source_poi": "终南山"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "阅江楼",
+    "attribute": [
+      {
+        "address": "江苏省南京市鼓楼区建宁路202号"
+      },
+      {
+        "coordinates": "34.19719994,108.9806073"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "占地面积": "约5000m2"
+      },
+      {
+        "投用时间": "2001年9月"
+      },
+      {
+        "开放时间": "8:00-17:30"
+      },
+      {
+        "景点级别": "AAAA级"
+      },
+      {
+        "门票价格": "40元"
+      },
+      {
+        "建成/发现时间": "明朝洪武七年（1374年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "鼓楼区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "景区"
+      }
+    ],
+    "source_poi": "阅江楼"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "图书馆",
+    "attribute": [
+      {
+        "address": "未央区"
+      },
+      {
+        "coordinates": "34.02811574,109.0040005"
+      },
+      {
+        "类型": "文化设施用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "图书馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "西安鼓楼",
+    "attribute": [
+      {
+        "address": "陕西省西安市中心北院门街南端,西大街北侧"
+      },
+      {
+        "coordinates": "34.26176037,108.9388376"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "占地面积": "1998.8平方米"
+      },
+      {
+        "文保级别": "全国重点文物保护单位"
+      },
+      {
+        "景点级别": "AAA级"
+      },
+      {
+        "开放时间": "2月12日-10月10日08:30-21:30;12月24日-次年2月11日08:30-18:00"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "建议游玩时长": "1小时"
+      },
+      {
+        "门票价格": "30元/人次"
+      },
+      {
+        "建成/发现时间": "明太祖朱元璋洪武十三年（1380年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "莲湖区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      }
+    ],
+    "source_poi": "西安鼓楼"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "教堂",
+    "attribute": [
+      {
+        "address": "地址信息"
+      },
+      {
+        "coordinates": "34.17525718,108.5213329"
+      },
+      {
+        "类型": "宗教用地"
+      },
+      {
+        "建成/发现时间": "未获取到正文内容"
+      },
+      {
+        "面积": "未获取到正文内容"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "未央区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "宗教用地"
+      }
+    ],
+    "source_poi": "教堂"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "钱学森图书馆",
+    "attribute": [
+      {
+        "address": "上海交通大学徐汇校区"
+      },
+      {
+        "coordinates": "34.24870055,108.9789687"
+      },
+      {
+        "类型": "科学家纪念馆(国家级)"
+      },
+      {
+        "开放时间": "每周二至周日9:00-17:00(周一闭馆)"
+      },
+      {
+        "竣工时间": "2011-12-11"
+      },
+      {
+        "馆藏精品": "钱学森生前科研、生活珍贵史料"
+      },
+      {
+        "名称": "钱学森图书馆"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "区": "碑林区"
+      },
+      {
+        "建成/发现时间": "2011年12月11日"
+      },
+      {
+        "面积": "8188平方米"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "徐汇区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "科学家纪念馆(国家级)"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "钱学森图书馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "大雁塔",
+    "attribute": [
+      {
+        "address": "陕西省西安市雁塔区大慈恩寺内"
+      },
+      {
+        "coordinates": "34.21979681,108.9594259"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "建成/发现时间": "唐永徽三年（652年）"
+      },
+      {
+        "面积": "2061平方米"
+      },
+      {
+        "开放时间": "08:00—17:00（每日）"
+      },
+      {
+        "门票价格": "40元/人,淡季30元/人"
+      },
+      {
+        "文保级别": "第一批全国重点文物保护单位"
+      },
+      {
+        "荣誉": "世界文化遗产"
+      },
+      {
+        "景区级别": "AAAAA级"
+      },
+      {
+        "建议游玩时长": "2-3小时"
+      },
+      {
+        "适宜游玩季节": "四季皆宜"
+      },
+      {
+        "著名景点": "大雁塔遗址公园,玄奘三藏院"
+      },
+      {
+        "交通信息": "车站类型车站名称线路 公交站大雁塔南广场21路、22路、23路、24路、41路、44路、189路、242路、271路、408路、500路、601路、606路、609路、曲江公交旅游环线、游6路、游8/610路 大雁塔北广场5路、19路、21路、22路、23路、24路、27路、30路、34路、41路、44路、189路、224路、224路延点区间、242路、271路、307路、400路、401路、408路、500路、521路、526路、601路、606路、609路、701路、713路区间、环山旅游1号线、环山旅游2号线、曲江公交旅游环线、游6路、游8/610路、游9/320路 地铁站大雁塔站西安地铁3、4号线大雁塔北广场"
+      },
+      {
+        "旅游信息": "大雁塔北广场景区事件播报编辑2025年10月，陕西省西安市遭遇持续降雨，10月13日，为期一个多月的降雨短暂停止，大雁塔被雨水打湿受潮，连城墙也布满青苔。10月12日下午，记者来到西安大雁塔，发现塔身被雨水打湿，部分区域出现受潮的情况而变黑。10月13日上午，记者就此事联系大慈恩寺景区，工作人员表示，已收到反馈，（塔身的维护）会有专门的文物保护部门负责。"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "大雁塔"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "岱庙",
+    "attribute": [
+      {
+        "address": "山东省泰安市泰山区东岳大街191号"
+      },
+      {
+        "coordinates": "34.26259594,108.9659752"
+      },
+      {
+        "类型": "宗教用地"
+      },
+      {
+        "占地面积": "96000m2"
+      },
+      {
+        "保护级别": "第三批全国重点文物保护单位"
+      },
+      {
+        "批准单位": "中华人民共和国国务院"
+      },
+      {
+        "编号": "3-0125-3-0073"
+      },
+      {
+        "始建年代": "汉代"
+      },
+      {
+        "名称": "东岳庙"
+      },
+      {
+        "所处时代": "汉至清"
+      },
+      {
+        "建成/发现时间": "汉代"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "泰山区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "宗教用地"
+      }
+    ],
+    "source_poi": "岱庙"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "交大西迁博物馆",
+    "attribute": [
+      {
+        "address": "陕西省西安市碑林区咸宁西路28号"
+      },
+      {
+        "coordinates": "34.24901888,108.9809629"
+      },
+      {
+        "类型": "社会科学类历史专题博物馆"
+      },
+      {
+        "占地面积": "940平方米"
+      },
+      {
+        "投用时间": "2018年12月11日"
+      },
+      {
+        "开放时间": "夏季(5月一9月):9:00一17:30;冬季(10月一次年4月):9:00一17:00;周一至周五开放"
+      },
+      {
+        "门票价格": "免费"
+      },
+      {
+        "藏品数量": "1084件/套(截至2019年末)"
+      },
+      {
+        "类型": "纪念用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "碑林区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "社会科学类历史专题博物馆"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "纪念用地"
+      }
+    ],
+    "source_poi": "交大西迁博物馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "唐仲英艺术庭院",
+    "attribute": [
+      {
+        "address": "雁塔区西影路"
+      },
+      {
+        "coordinates": "34.24814272,108.9767399"
+      },
+      {
+        "类型": "文化设施用地"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      }
+    ],
+    "source_poi": "唐仲英艺术庭院"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "丹凤门",
+    "attribute": [
+      {
+        "address": "大明宫丹凤门博物馆"
+      },
+      {
+        "coordinates": "34.2828365,108.9595098"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "建成/发现时间": "唐朝龙朔二年(公元662年)"
+      },
+      {
+        "面积": "约2460m2"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      }
+    ],
+    "source_poi": "丹凤门"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "陕西钱币博物馆",
+    "attribute": [
+      {
+        "address": "陕西省西安市高新区高新路49号"
+      },
+      {
+        "coordinates": "34.23169235,108.90095"
+      },
+      {
+        "类型": "专业性博物馆"
+      },
+      {
+        "投用时间": "2012年8月"
+      },
+      {
+        "展厅面积": "890平方米"
+      },
+      {
+        "主管单位": "中国人民银行西安分行"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "区": "雁塔区"
+      },
+      {
+        "商业区": "西安高新技术产业开发区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "雁塔区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "专业性博物馆"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "陕西钱币博物馆"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "含元殿遗址",
+    "attribute": [
+      {
+        "address": "西安北郊龙首塬南端的高岗之上"
+      },
+      {
+        "coordinates": "34.2891507,108.9594648"
+      },
+      {
+        "类型": "文化遗产用地"
+      },
+      {
+        "总面积": "70,000平方米"
+      },
+      {
+        "建成时间": "龙朔三年(663年)"
+      },
+      {
+        "区": "新城区"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化遗产用地"
+      }
+    ],
+    "source_poi": "含元殿遗址"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "人民剧院",
+    "attribute": [
+      {
+        "address": "新城区"
+      },
+      {
+        "coordinates": "34.2644621,108.9434375"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "成立时间": "1946年"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "京剧表演团体"
+      }
+    ],
+    "source_poi": "人民剧院"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "易俗大剧院",
+    "attribute": [
+      {
+        "address": "陕西省西安市新城区案板街26号"
+      },
+      {
+        "coordinates": "34.2630145,108.9447596"
+      },
+      {
+        "类型": "文化设施用地"
+      },
+      {
+        "投用时间": "1993年11月30日"
+      },
+      {
+        "建筑面积": "10440平方米"
+      },
+      {
+        "观众席数量": "1161位"
+      },
+      {
+        "舞台类型": "镜框式舞台"
+      },
+      {
+        "乐池类型": "可升降三板块结构"
+      },
+      {
+        "运营公司": "西安演艺集团"
+      },
+      {
+        "品牌": "西演LIVE"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化设施用地"
+      },
+      {
+        "relation_type": "has_attribute",
+        "entity_type": "attribute",
+        "entity_name": "投用时间"
+      }
+    ],
+    "source_poi": "易俗大剧院"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "城隍殿",
+    "attribute": [
+      {
+        "address": "莲湖区北院门"
+      },
+      {
+        "coordinates": "34.2635082,108.9326793"
+      },
+      {
+        "类型": "宗教用地"
+      },
+      {
+        "建立时间": "明朝晚期"
+      },
+      {
+        "毁损时间": "1958年"
+      },
+      {
+        "特点": "建筑雄伟,飞檐翘角,气势恢弘"
+      },
+      {
+        "百科标签": "寺庙建筑"
+      },
+      {
+        "面积": ""
+      },
+      {
+        "建成/发现时间": "明朝晚期"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "莲湖区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "宗教用地"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "寺庙建筑"
+      }
+    ],
+    "source_poi": "城隍殿"
+  },
+  {
+    "entity_type": "poi_name",
+    "entity_name": "望仙台",
+    "attribute": [
+      {
+        "address": "大明宫紫宸殿东侧"
+      },
+      {
+        "coordinates": "34.29297402,108.9606493"
+      },
+      {
+        "类型": "文化精神标识地"
+      },
+      {
+        "建造时间": "会昌年间(841-846年)"
+      },
+      {
+        "遗址现状": "大明宫国家遗址公园内已探明的40余处遗址之一,被纳入国家5A级景区保护体系"
+      },
+      {
+        "建筑结构": "方形覆斗状夯土台"
+      },
+      {
+        "现存高度": "9.7米"
+      },
+      {
+        "文物保护等级": "国家级遗址"
+      },
+      {
+        "面积": ""
+      },
+      {
+        "建成/发现时间": "会昌年间（约公元841年）"
+      }
+    ],
+    "relations": [
+      {
+        "relation_type": "locate_in",
+        "entity_type": "district",
+        "entity_name": "新城区"
+      },
+      {
+        "relation_type": "has_type",
+        "entity_type": "poi_type",
+        "entity_name": "文化精神标识地"
+      }
+    ],
+    "source_poi": "望仙台"
+  }
+]
