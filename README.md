@@ -18,27 +18,6 @@ Open-source package for the Xi'an urban cultural land diagnosis workflow based o
 4. Run `python run_pipeline.py --dry-run` to verify the stage configuration.
 5. Run `python run_pipeline.py` for the full workflow, or pass `--stage` / `--from-stage` for partial execution.
 
-## Directory Layout
-
-```text
-.
-|-- artifacts/
-|   `-- v20260225/
-|-- config/
-|   |-- ontology.json
-|   |-- params.yaml
-|   `-- prompts/
-|-- data/
-|   |-- auxiliary/
-|   |-- policy/
-|   |-- raw/
-|   `-- spatial/
-|-- outputs/
-|-- src/
-|   `-- utils/
-`-- run_pipeline.py
-```
-
 ## Notes
 
 - The repository keeps both raw inputs and processed artifacts so the workflow can be inspected without recomputing every stage.
