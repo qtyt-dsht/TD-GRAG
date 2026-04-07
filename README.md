@@ -8,7 +8,6 @@ Open-source package for the Xi'an urban cultural land diagnosis workflow based o
 - Sanitized configuration in `config/params.yaml`
 - Prompt templates and ontology files in `config/`
 - Raw and auxiliary input data in `data/`
-- Processed outputs and evaluation artifacts in `artifacts/v20260225/`
 - Empty `outputs/` directory for regenerated figures and tables
 
 ## What Was Removed
