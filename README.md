@@ -10,13 +10,6 @@ Open-source package for the Xi'an urban cultural land diagnosis workflow based o
 - Raw and auxiliary input data in `data/`
 - Empty `outputs/` directory for regenerated figures and tables
 
-## What Was Removed
-
-- Real API keys and local Neo4j credentials
-- LLM cache files and call logs
-- Paper drafting files, LaTeX sources, and manuscript-only assets
-- Local workspace noise such as `__pycache__`
-
 ## Quick Start
 
 1. Create a Python environment and install dependencies.
