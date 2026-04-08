@@ -1,210 +1,119 @@
 {
-    "version": "1.0",
-    "description": "文化用地本体Schema - CulturLand-Check",
-    "entity_types": {
-        "POI": {
-            "description": "文化用地兴趣点",
-            "core_attributes": [
-                "名称",
-                "类型",
-                "坐标",
-                "区",
-                "面积",
-                "建成时间",
-                "保护类型"
-            ],
-            "optional_attributes": [
-                "百科摘要",
-                "百科标签",
-                "百科历史信息",
-                "门票价格"
-            ]
-        },
-        "行政区": {
-            "description": "西安市行政区划",
-            "core_attributes": [
-                "名称",
-                "面积",
-                "人口"
-            ],
-            "instances": [
-                "碑林区",
-                "雁塔区",
-                "莲湖区",
-                "新城区",
-                "未央区",
-                "灞桥区",
-                "长安区",
-                "临潼区",
-                "阎良区",
-                "高陵区",
-                "鄠邑区",
-                "蓝田县",
-                "周至县",
-                "西咸新区",
-                "曲江新区",
-                "高新区",
-                "经开区",
-                "浐灞生态区"
-            ]
-        },
-        "政策条款": {
-            "description": "文化用地相关政策法规条款",
-            "core_attributes": [
-                "条款编号",
-                "条款内容",
-                "来源文件",
-                "适用范围"
-            ]
-        },
-        "文化类型": {
-            "description": "文化用地分类",
-            "instances": [
-                "文化精神标识地",
-                "纪念用地",
-                "宗教用地",
-                "文化遗产用地",
-                "文化设施用地",
-                "文化产业用地"
-            ]
-        },
-        "舆情主题": {
-            "description": "公众感知主题",
-            "core_attributes": [
-                "主题名称",
-                "情感倾向",
-                "出现频次"
-            ]
-        },
-        "时间片": {
-            "description": "时间维度实体",
-            "core_attributes": [
-                "时期",
-                "起始年份",
-                "结束年份"
-            ]
-        }
+  "version": "2.0",
+  "description": "Cultural land ontology aligned with Section 3.2 of the paper. The ontology is diagnostic rather than encyclopedic and constrains extraction to eight typed relations that support district-level analysis.",
+  "entity_types": {
+    "VenueOrSite": {
+      "description": "Cultural venue, heritage site, park, district block, museum, memorial hall, religious site, or other cultural land unit used as the main diagnostic anchor.",
+      "aliases": ["POI", "Venue", "Site", "poi", "venue", "site"],
+      "core_attributes": ["name", "poi_category", "district", "coordinates", "source_id"]
     },
-    "relation_types": {
-        "位于": {
-            "head": "POI",
-            "tail": "行政区",
-            "description": "POI所在行政区"
-        },
-        "属于": {
-            "head": "POI",
-            "tail": "文化类型",
-            "description": "POI所属文化用地类型"
-        },
-        "受约束于": {
-            "head": "POI",
-            "tail": "政策条款",
-            "description": "POI受到的政策约束"
-        },
-        "邻近": {
-            "head": "POI",
-            "tail": "POI",
-            "description": "空间邻近关系（距离<2km）"
-        },
-        "关注于": {
-            "head": "舆情主题",
-            "tail": "POI",
-            "description": "舆情主题关注的POI"
-        },
-        "始建于": {
-            "head": "POI",
-            "tail": "时间片",
-            "description": "POI建成时间"
-        },
-        "同区": {
-            "head": "POI",
-            "tail": "POI",
-            "description": "位于同一行政区的POI"
-        },
-        "同类": {
-            "head": "POI",
-            "tail": "POI",
-            "description": "属于同一文化类型的POI"
-        }
+    "District": {
+      "description": "Administrative district used as the unit of diagnosis.",
+      "aliases": ["行政区", "DistrictUnit", "district"]
     },
-    "type_specific_relations": {
-        "文化精神标识地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ],
-        "纪念用地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ],
-        "宗教用地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ],
-        "文化遗产用地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ],
-        "文化设施用地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ],
-        "文化产业用地": [
-            "位于",
-            "属于",
-            "受约束于",
-            "邻近",
-            "始建于",
-            "关注于"
-        ]
+    "Institution": {
+      "description": "Government bureau, management committee, venue operator, or other institution responsible for management.",
+      "aliases": ["InstitutionalActor", "institution"]
     },
-    "xian_city_keywords": [
-        "西安",
-        "长安",
-        "碑林",
-        "雁塔",
-        "莲湖",
-        "新城区",
-        "未央",
-        "灞桥",
-        "长安区",
-        "临潼",
-        "阎良",
-        "高陵",
-        "鄠邑",
-        "蓝田",
-        "周至",
-        "曲江",
-        "高新区",
-        "经开区",
-        "浐灞",
-        "大雁塔",
-        "钟楼",
-        "鼓楼",
-        "城墙",
-        "兵马俑",
-        "华清池",
-        "大明宫",
-        "秦始皇",
-        "陕西"
-    ]
+    "Service": {
+      "description": "Cultural service, program item, or capacity descriptor used in diagnosis, such as exhibition, performance, education, community activity, seating scale, collection size, or usable service area.",
+      "aliases": ["CulturalService", "service"]
+    },
+    "Award": {
+      "description": "Formal recognition, grade, ranking, or award used as a quality signal.",
+      "aliases": ["Honor", "Recognition", "award"]
+    },
+    "Organization": {
+      "description": "External organization, university, enterprise, NGO, or cultural partner linked through collaboration.",
+      "aliases": ["PartnerOrganization", "organization"]
+    },
+    "DemographicGroup": {
+      "description": "Target or served population such as children, older adults, tourists, residents, students, or community groups.",
+      "aliases": ["PopulationGroup", "demographic", "group"]
+    },
+    "PolicyDocument": {
+      "description": "Policy, plan, regulation, approval document, or planning text that constrains or governs cultural land.",
+      "aliases": ["Policy", "Plan", "Regulation", "policy document", "policy"]
+    }
+  },
+  "relation_types": {
+    "locatedIn": {
+      "head": ["VenueOrSite"],
+      "tail": ["District"],
+      "description": "Assigns a cultural venue or site to the administrative district being diagnosed.",
+      "diagnostic_meaning": "District anchor relation for district graph construction.",
+      "diagnostic_dimension": "anchor",
+      "aliases": ["位于", "locate_in", "located_in"]
+    },
+    "managedBy": {
+      "head": ["VenueOrSite"],
+      "tail": ["Institution"],
+      "description": "Captures the institutional support structure behind cultural operation.",
+      "diagnostic_meaning": "Supply-side institutional support.",
+      "diagnostic_dimension": "supply",
+      "aliases": ["managed_by", "运营方", "管理方"]
+    },
+    "providesService": {
+      "head": ["VenueOrSite"],
+      "tail": ["Service"],
+      "description": "Represents cultural service breadth, such as exhibition, performance, education, or community programming.",
+      "diagnostic_meaning": "Supply-side service breadth.",
+      "diagnostic_dimension": "supply",
+      "aliases": ["provides_service", "提供服务", "serviceProvided"]
+    },
+    "hasCapacity": {
+      "head": ["VenueOrSite"],
+      "tail": ["Service"],
+      "description": "Encodes the service carrying capacity of a venue.",
+      "diagnostic_meaning": "Supply-side service carrying capacity.",
+      "diagnostic_dimension": "supply",
+      "aliases": ["has_capacity", "capacity", "容量", "服务能力"]
+    },
+    "receivedAward": {
+      "head": ["VenueOrSite"],
+      "tail": ["Award"],
+      "description": "Represents quality signals derived from formal recognition or ranking.",
+      "diagnostic_meaning": "Quality-side recognition and prestige.",
+      "diagnostic_dimension": "quality",
+      "aliases": ["received_award", "has_honor", "has_grade", "has_museum_level", "荣誉", "奖项", "等级"]
+    },
+    "partnersWith": {
+      "head": ["VenueOrSite"],
+      "tail": ["Organization"],
+      "description": "Encodes collaborative depth and institutional connectivity.",
+      "diagnostic_meaning": "Quality-side collaboration and external linkage.",
+      "diagnostic_dimension": "quality",
+      "aliases": ["partners_with", "associated_with", "合作机构", "合作方"]
+    },
+    "servesDemographic": {
+      "head": ["VenueOrSite"],
+      "tail": ["DemographicGroup"],
+      "description": "Connects cultural provision to target populations and public accessibility.",
+      "diagnostic_meaning": "Demand-side public reach and accessibility.",
+      "diagnostic_dimension": "demand",
+      "aliases": ["serves_demographic", "服务人群", "面向人群"]
+    },
+    "regulatedBy": {
+      "head": ["District", "VenueOrSite"],
+      "tail": ["PolicyDocument"],
+      "description": "Links a district or venue to planning and governance constraints.",
+      "diagnostic_meaning": "Demand-side governance and planning constraint.",
+      "diagnostic_dimension": "demand",
+      "aliases": ["regulated_by", "受约束于", "governedBy"]
+    }
+  },
+  "diagnostic_dimensions": {
+    "anchor": ["locatedIn"],
+    "supply": ["managedBy", "providesService", "hasCapacity"],
+    "demand": ["servesDemographic", "regulatedBy"],
+    "quality": ["receivedAward", "partnersWith"]
+  },
+  "type_specific_relations": {
+    "遗址遗迹类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"],
+    "博物馆纪念馆类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"],
+    "宗教场所类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"],
+    "历史街区类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"],
+    "文化公园/广场类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"],
+    "其他文化设施类": ["locatedIn", "managedBy", "providesService", "hasCapacity", "receivedAward", "partnersWith", "servesDemographic", "regulatedBy"]
+  }
 }

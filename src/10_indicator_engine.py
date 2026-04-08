@@ -216,17 +216,17 @@ def compute_quality_indicators(
         if district:
             region_pois[district].append(poi)
 
-    # 构建空间关系图统计
-    spatial_edges: Dict[str, int] = defaultdict(int)  # region -> 空间关系数
+    # 构建质量相关图谱关系统计
+    graph_quality_edges: Dict[str, int] = defaultdict(int)  # region -> 质量相关关系数
     for tri in triplets:
-        if tri.get("relation") in ("邻近", "同区"):
+        if tri.get("relation") in ("receivedAward", "partnersWith", "regulatedBy"):
             source_poi = tri.get("source_poi", tri.get("head", ""))
             for poi in pois:
                 name = poi.get("名称", poi.get("中文名", ""))
                 if name == source_poi:
                     district = poi.get("区", "") or poi.get("行政区", "")
                     if district:
-                        spatial_edges[district] += 1
+                        graph_quality_edges[district] += 1
                     break
 
     results = {}
@@ -279,9 +279,9 @@ def compute_quality_indicators(
 
         cultural_value = np.mean(value_scores) if value_scores else 0.0
 
-        # 空间协同度 Syn_k = |E_spatial(P_k)| / (|P_k| · (|P_k|-1) / 2)
+        # 图谱协同度 Syn_k = |E_quality(P_k)| / (|P_k| · (|P_k|-1) / 2)
         max_edges = n_pois * (n_pois - 1) / 2 if n_pois > 1 else 1
-        spatial_synergy = spatial_edges.get(region, 0) / max_edges
+        spatial_synergy = graph_quality_edges.get(region, 0) / max_edges
 
         results[region] = {
             "poi_count": n_pois,

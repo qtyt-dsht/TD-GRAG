@@ -31,6 +31,7 @@ sys.path.insert(0, str(ROOT))
 
 from src.utils.geo_utils import parse_coord
 from src.utils.kg_utils import merge_relation_distribution, normalize_relation_name
+from src.utils.triplet_utils import PAPER_RELATIONS, load_triplets_file
 
 
 def load_config() -> Dict[str, Any]:
@@ -321,38 +322,11 @@ def run_build_kg(config: Dict[str, Any]) -> Dict[str, Any]:
         triplets_path = ROOT / config["data"]["triplets_raw"]
         logger.warning(f"triplets_full 不存在，回退到: {triplets_path}")
 
-    with open(triplets_path, "r", encoding="utf-8") as f:
-        triplets = json.load(f)
-
-    # 如果是旧格式（嵌套的triplets.json），先转换
-    if triplets and isinstance(triplets[0], dict) and "relations" in triplets[0]:
-        logger.info("检测到旧格式三元组，执行格式转换...")
-        flat_triplets = []
-        for item in triplets:
-            entity_name = item.get("entity_name", "")
-            for rel in item.get("relations", []):
-                flat_triplets.append({
-                    "head": entity_name,
-                    "relation": rel.get("relation_type", ""),
-                    "tail": rel.get("entity_name", ""),
-                    "confidence": 0.8,
-                    "source_poi": item.get("source_poi", entity_name),
-                    "poi_type": item.get("entity_type", ""),
-                    "source": "legacy_triplets"
-                })
-            # 属性也作为关系
-            for attr in item.get("attribute", []):
-                for k, v in attr.items():
-                    if v and str(v) not in ("None", "null", ""):
-                        flat_triplets.append({
-                            "head": entity_name,
-                            "relation": f"has_{k}",
-                            "tail": str(v),
-                            "confidence": 1.0,
-                            "source_poi": item.get("source_poi", entity_name),
-                            "source": "legacy_attributes"
-                        })
-        triplets = flat_triplets
+    triplets = load_triplets_file(
+        triplets_path,
+        valid_relations=PAPER_RELATIONS,
+        default_source="build_kg"
+    )
 
     logger.info(f"加载 {len(triplets)} 条三元组")
 

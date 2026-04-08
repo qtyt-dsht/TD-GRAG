@@ -21,6 +21,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from src.utils.llm_client import LLMClient
+from src.utils.triplet_utils import PAPER_RELATIONS, load_triplets_file
+
+
+SUPPLY_RELATIONS = {"managedBy", "providesService", "hasCapacity"}
+DEMAND_RELATIONS = {"servesDemographic", "regulatedBy"}
+QUALITY_RELATIONS = {"receivedAward", "partnersWith"}
 
 
 def load_config() -> Dict[str, Any]:
@@ -97,33 +103,31 @@ class TripletsRetriever:
 
     def retrieve_supply_subgraph(self, region: str) -> List[Dict]:
         """
-        检索供给侧子图: POI→位于→区域, POI→邻近→POI 路径
+        检索供给侧子图: managedBy / providesService / hasCapacity
         """
         region_pois = self.poi_by_region.get(region, [])
         subgraph = []
 
         for poi_name in region_pois:
-            # POI→位于→区域
             for tri in self.by_head.get(poi_name, []):
-                if tri["relation"] in ("位于", "邻近", "同区", "同类"):
-                    subgraph.append(tri)
-            # 区域←位于←POI
-            for tri in self.by_tail.get(region, []):
-                if tri["head"] in region_pois:
+                if tri["relation"] in SUPPLY_RELATIONS:
                     subgraph.append(tri)
 
         return subgraph
 
     def retrieve_demand_subgraph(self, region: str) -> List[Dict]:
         """
-        检索需求侧子图: POI→关注于→舆情主题 路径
+        检索需求侧子图: servesDemographic / regulatedBy
         """
         region_pois = self.poi_by_region.get(region, [])
         subgraph = []
 
         for poi_name in region_pois:
             for tri in self.by_head.get(poi_name, []):
-                if tri["relation"] in ("关注于",):
+                if tri["relation"] in DEMAND_RELATIONS:
+                    subgraph.append(tri)
+            for tri in self.by_head.get(region, []):
+                if tri["relation"] in DEMAND_RELATIONS:
                     subgraph.append(tri)
             # 获取POI的舆情摘要
             poi = self.poi_info.get(poi_name, {})
@@ -141,25 +145,15 @@ class TripletsRetriever:
 
     def retrieve_quality_subgraph(self, region: str) -> List[Dict]:
         """
-        检索质量侧子图: POI→受约束于→政策条款, POI→属于→遗产等级 路径
+        检索质量侧子图: receivedAward / partnersWith
         """
         region_pois = self.poi_by_region.get(region, [])
         subgraph = []
 
         for poi_name in region_pois:
             for tri in self.by_head.get(poi_name, []):
-                if tri["relation"] in ("受约束于", "属于", "始建于"):
+                if tri["relation"] in QUALITY_RELATIONS:
                     subgraph.append(tri)
-            # 补充保护信息
-            poi = self.poi_info.get(poi_name, {})
-            protect = poi.get("保护类型", "")
-            if protect and str(protect) not in ("None", "null", ""):
-                subgraph.append({
-                    "head": poi_name,
-                    "relation": "保护等级",
-                    "tail": str(protect),
-                    "confidence": 1.0
-                })
 
         return subgraph
 
@@ -317,22 +311,11 @@ def run_td_grag_diagnosis(config: Dict[str, Any]) -> Dict[str, Any]:
     triplets_path = ROOT / config["kg"]["triplets_full"]
     if not triplets_path.exists():
         triplets_path = ROOT / config["data"]["triplets_raw"]
-    with open(triplets_path, "r", encoding="utf-8") as f:
-        triplets = json.load(f)
-    # 处理旧格式
-    if triplets and isinstance(triplets[0], dict) and "relations" in triplets[0]:
-        flat = []
-        for item in triplets:
-            entity_name = item.get("entity_name", "")
-            for rel in item.get("relations", []):
-                flat.append({
-                    "head": entity_name,
-                    "relation": rel.get("relation_type", ""),
-                    "tail": rel.get("entity_name", ""),
-                    "confidence": 0.8,
-                    "source_poi": item.get("source_poi", entity_name)
-                })
-        triplets = flat
+    triplets = load_triplets_file(
+        triplets_path,
+        valid_relations=PAPER_RELATIONS,
+        default_source="td_grag"
+    )
 
     # 加载指标
     indicator_path = ROOT / config["indicator"]["indicator_csv"]

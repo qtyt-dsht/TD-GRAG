@@ -24,6 +24,11 @@ sys.path.insert(0, str(ROOT))
 
 from src.utils.llm_client import LLMClient
 from src.utils.geo_utils import parse_coord, haversine
+from src.utils.triplet_utils import (
+    canonicalize_triplet,
+    normalize_entity_type,
+    normalize_relation_name,
+)
 
 
 # ──────────────────────────────────────────────
@@ -74,40 +79,87 @@ class OntologyHelper:
             }
         self.valid_relation_names: Set[str] = set(self.relation_types.keys())
         self.type_relations = ontology.get("type_specific_relations", {})
+        self.dimension_map = ontology.get("diagnostic_dimensions", {})
 
     def get_valid_relations(self, poi_type: str) -> List[str]:
         """获取该POI类型允许的关系列表"""
         return self.type_relations.get(poi_type, list(self.valid_relation_names))
 
-    def get_core_attributes(self, poi_type: str) -> List[str]:
-        """获取该POI类型的核心属性"""
-        type_attr_map = {
-            "遗址遗迹类": ["保护类型", "建成朝代", "面积", "建成/发现时间"],
-            "博物馆纪念馆类": ["开放时间", "门票价格", "面积", "建议游玩时长"],
-            "宗教场所类": ["保护类型", "建成朝代", "建成/发现时间", "地理位置"],
-            "历史街区类": ["面积", "地理位置", "建成/发现时间", "保护类型"],
-            "文化公园/广场类": ["开放时间", "面积", "地理位置", "建议游玩时长"],
-            "其他文化设施类": ["开放时间", "门票价格", "面积", "地理位置"],
-        }
-        poi_core = self.entity_types.get("POI", {}).get(
-            "core_attributes",
-            ["名称", "类型", "坐标", "区"]
-        )
-        merged = []
-        for item in list(poi_core) + type_attr_map.get(poi_type, []):
-            if item and item not in merged:
-                merged.append(item)
-        return merged or ["名称", "类型", "坐标", "区"]
+    def get_entity_type_list(self) -> List[str]:
+        return list(self.entity_types.keys())
+
+    def get_relation_schema_lines(self, poi_type: str) -> List[str]:
+        lines = []
+        for relation in self.get_valid_relations(poi_type):
+            meta = self.relation_types.get(relation, {})
+            head = " / ".join(meta.get("head", [])) or "Unknown"
+            tail = " / ".join(meta.get("tail", [])) or "Unknown"
+            meaning = meta.get("diagnostic_meaning", meta.get("description", ""))
+            lines.append(f"- {relation}: {head} -> {tail}. {meaning}")
+        return lines
+
+    def normalize_relation(self, relation: str) -> str:
+        relation = normalize_relation_name(relation)
+        if relation in self.valid_relation_names:
+            return relation
+        for name, meta in self.relation_types.items():
+            aliases = set(meta.get("aliases", []))
+            if relation == name or relation in aliases:
+                return name
+        return relation
+
+    def normalize_entity_type(self, entity_type: str) -> str:
+        entity_type = normalize_entity_type(entity_type)
+        if entity_type in self.entity_types:
+            return entity_type
+        for name, meta in self.entity_types.items():
+            aliases = set(meta.get("aliases", []))
+            if entity_type == name or entity_type in aliases:
+                return name
+        return entity_type
+
+    def infer_entity_types(self, relation: str, head_type: str = "", tail_type: str = "") -> Tuple[str, str]:
+        meta = self.relation_types.get(relation, {})
+        if not head_type:
+            head_type = next(iter(meta.get("head", [])), "")
+        if not tail_type:
+            tail_type = next(iter(meta.get("tail", [])), "")
+        return head_type, tail_type
 
     def is_spatial_relation(self, relation: str) -> bool:
         """判断是否为空间关系"""
         rt = self.relation_types.get(relation, {})
         return rt.get("is_spatial", False)
 
-    def is_valid_relation(self, relation: str, poi_type: str) -> bool:
+    def get_relation_dimension(self, relation: str) -> str:
+        relation = self.normalize_relation(relation)
+        for dimension, relations in self.dimension_map.items():
+            if relation in relations:
+                return dimension
+        return ""
+
+    def is_valid_relation(
+        self,
+        relation: str,
+        poi_type: str,
+        head_type: str = "",
+        tail_type: str = ""
+    ) -> bool:
         """验证关系类型对该POI类型是否合法"""
+        relation = self.normalize_relation(relation)
         valid = self.get_valid_relations(poi_type)
-        return relation in valid
+        if relation not in valid:
+            return False
+
+        if not head_type and not tail_type:
+            return True
+
+        meta = self.relation_types.get(relation, {})
+        head_type = self.normalize_entity_type(head_type)
+        tail_type = self.normalize_entity_type(tail_type)
+        head_ok = not head_type or head_type in meta.get("head", [])
+        tail_ok = not tail_type or tail_type in meta.get("tail", [])
+        return head_ok and tail_ok
 
 
 # ──────────────────────────────────────────────
@@ -119,19 +171,24 @@ def build_extraction_prompt(
     """
     构建 Schema 约束的抽取 Prompt
     """
-    valid_rels = ontology_helper.get_valid_relations(poi_type)
-    core_attrs = ontology_helper.get_core_attributes(poi_type)
+    review_samples = poi.get("xiaohongshu_clean", poi.get("xiaohongshu", [])) or []
+    if isinstance(review_samples, list):
+        review_text = "\n".join(str(x)[:120] for x in review_samples[:3])
+    else:
+        review_text = str(review_samples)[:360]
 
     prompt = template.format(
         type_name=poi_type,
-        valid_relations="、".join(valid_rels),
-        core_attributes="、".join(core_attrs),
+        entity_type_list="、".join(ontology_helper.get_entity_type_list()),
+        relation_schema="\n".join(ontology_helper.get_relation_schema_lines(poi_type)),
         poi_name=poi.get("名称", poi.get("中文名", "")),
         summary=poi.get("百科摘要", "") or "",
         tags=poi.get("百科标签", "") or "",
         history=poi.get("历史信息", "") or "",
+        review_samples=review_text or "(无评论样本)",
         coord=poi.get("坐标", ""),
-        district=poi.get("区", "") or poi.get("行政区", "")
+        district=poi.get("区", "") or poi.get("行政区", ""),
+        policy_context=poi.get("policy_context", "") or poi.get("政策上下文", "") or ""
     )
     return prompt
 
@@ -168,7 +225,21 @@ def extract_triplets_for_poi(
         data = llm.extract_json(resp)
         if data:
             result["entities"] = data.get("entities", [])
-            result["relations"] = data.get("relations", [])
+            raw_triplets = data.get("triplets", data.get("relations", [])) or []
+            normalized_triplets = []
+            for triplet in raw_triplets:
+                if not isinstance(triplet, dict):
+                    continue
+                canonical = canonicalize_triplet(
+                    triplet,
+                    source_poi=result["poi_name"],
+                    poi_type=poi_type,
+                    source="csge_llm",
+                    valid_relations=ontology_helper.valid_relation_names,
+                )
+                if canonical:
+                    normalized_triplets.append(canonical)
+            result["relations"] = normalized_triplets
     except (json.JSONDecodeError, TypeError, ValueError) as e:
         logger.warning(f"  JSON解析失败: {e}")
 
@@ -206,8 +277,11 @@ def validate_triplets(
 
     for rel in extraction.get("relations", []):
         head = rel.get("head", "")
-        relation = rel.get("relation", "")
+        relation = ontology_helper.normalize_relation(rel.get("relation", ""))
         tail = rel.get("tail", "")
+        head_type = ontology_helper.normalize_entity_type(rel.get("head_type", ""))
+        tail_type = ontology_helper.normalize_entity_type(rel.get("tail_type", ""))
+        head_type, tail_type = ontology_helper.infer_entity_types(relation, head_type, tail_type)
         confidence = float(rel.get("confidence", 0.5))
 
         rejection_reason = None
@@ -217,7 +291,7 @@ def validate_triplets(
             rejection_reason = f"置信度过低({confidence:.2f}<{min_confidence})"
 
         # 检查2: 关系类型合法性
-        elif not ontology_helper.is_valid_relation(relation, poi_type):
+        elif not ontology_helper.is_valid_relation(relation, poi_type, head_type, tail_type):
             rejection_reason = f"关系'{relation}'不在{poi_type}的允许关系集中"
 
         # 检查3: 空间一致性（仅对空间关系检查）
@@ -236,12 +310,22 @@ def validate_triplets(
 
         triplet = {
             "head": head,
+            "head_type": head_type,
             "relation": relation,
             "tail": tail,
+            "tail_type": tail_type,
             "confidence": round(confidence, 3),
             "source_poi": poi_name,
-            "poi_type": poi_type
+            "poi_type": poi_type,
+            "diagnostic_dimension": ontology_helper.get_relation_dimension(relation),
         }
+
+        evidence_text = str(rel.get("evidence_text", rel.get("evidence", "")) or "").strip()
+        source_corpus = str(rel.get("source_corpus", "") or "").strip()
+        if evidence_text:
+            triplet["evidence_text"] = evidence_text
+        if source_corpus:
+            triplet["source_corpus"] = source_corpus
 
         if rejection_reason:
             triplet["rejection_reason"] = rejection_reason
@@ -296,7 +380,8 @@ def merge_and_deduplicate(
 # ──────────────────────────────────────────────
 def merge_with_existing(
     new_triplets: List[Dict],
-    existing_path: Path
+    existing_path: Path,
+    ontology_helper: OntologyHelper
 ) -> List[Dict]:
     """
     将新抽取的三元组与已有triplets.json合并
@@ -310,20 +395,30 @@ def merge_with_existing(
 
     logger.info(f"已有三元组文件包含 {len(existing)} 条记录")
 
-    # 将已有格式转为统一三元组格式
+    # 将已有格式转为统一三元组格式，并过滤非论文本体关系
     existing_triplets = []
+    skipped_legacy = 0
     for item in existing:
-        entity_name = item.get("entity_name", "")
+        entity_name = item.get("entity_name", item.get("name", ""))
         for rel in item.get("relations", []):
-            existing_triplets.append({
-                "head": entity_name,
-                "relation": rel.get("relation_type", ""),
-                "tail": rel.get("entity_name", ""),
-                "confidence": 0.8,  # 已有数据默认置信度
-                "source_poi": item.get("source_poi", entity_name),
-                "poi_type": item.get("entity_type", ""),
-                "source": "existing_triplets"
-            })
+            candidate = canonicalize_triplet(
+                {
+                    "head": entity_name,
+                    "head_type": item.get("entity_type", ""),
+                    "relation": rel.get("relation", rel.get("relation_type", "")),
+                    "tail": rel.get("tail", rel.get("target", rel.get("entity_name", ""))),
+                    "tail_type": rel.get("tail_type", rel.get("entity_type", "")),
+                    "confidence": rel.get("confidence", 0.8),
+                    "source_poi": item.get("source_poi", entity_name),
+                    "poi_type": item.get("poi_type", item.get("entity_type", "")),
+                    "source": "existing_triplets"
+                },
+                valid_relations=ontology_helper.valid_relation_names,
+            )
+            if candidate:
+                existing_triplets.append(candidate)
+            else:
+                skipped_legacy += 1
 
     # 标记新抽取的来源
     for tri in new_triplets:
@@ -334,6 +429,8 @@ def merge_with_existing(
     _, unique = merge_and_deduplicate([], all_triplets)
     logger.info(f"合并后共 {len(unique)} 条唯一三元组 "
                 f"(已有={len(existing_triplets)}, 新增={len(new_triplets)})")
+    if skipped_legacy:
+        logger.info(f"  已过滤 {skipped_legacy} 条不属于论文本体的旧关系")
     return unique
 
 
@@ -467,7 +564,7 @@ def run_csge_extraction(config: Dict[str, Any], limit: int = 0) -> Dict[str, Any
 
     # 与已有三元组合并
     existing_path = ROOT / config["data"]["triplets_raw"]
-    final_triplets = merge_with_existing(unique_triplets, existing_path)
+    final_triplets = merge_with_existing(unique_triplets, existing_path, onto_helper)
 
     # 更新覆盖POI集合
     for tri in final_triplets:
@@ -521,57 +618,69 @@ def generate_base_triplets(
     triplets = []
     district = poi.get("区", "") or poi.get("行政区", "")
 
-    # 位于关系
+    # locatedIn: 区级锚定关系
     if district:
         triplets.append({
             "head": poi_name,
-            "relation": "位于",
+            "head_type": "VenueOrSite",
+            "relation": "locatedIn",
             "tail": district,
+            "tail_type": "District",
             "confidence": 1.0,
+            "source_corpus": "descriptive",
+            "diagnostic_dimension": "anchor",
         })
 
-    # 属于关系（类型）
-    if poi_type:
-        triplets.append({
-            "head": poi_name,
-            "relation": "属于",
-            "tail": poi_type,
-            "confidence": 1.0,
-        })
-
-    # 始建于关系
-    year = poi.get("建成年份") or poi.get("建成/发现时间")
-    era = poi.get("建成朝代")
-    if year or era:
-        time_entity = str(era) if era else str(year)
-        if time_entity and time_entity not in ("None", "null", ""):
+    # hasCapacity: 使用可审计的容量代理字段
+    for field in ("藏品数量", "面积_sqm", "建筑面积", "占地面积", "面积"):
+        raw_value = poi.get(field)
+        if raw_value not in (None, "", "None", "null", "[]"):
             triplets.append({
                 "head": poi_name,
-                "relation": "始建于",
-                "tail": time_entity,
+                "head_type": "VenueOrSite",
+                "relation": "hasCapacity",
+                "tail": f"{field}:{raw_value}",
+                "tail_type": "Service",
                 "confidence": 0.9,
+                "source_corpus": "descriptive",
+                "diagnostic_dimension": "supply",
+                "evidence_text": str(raw_value),
             })
+            break
 
-    # 邻近关系（距离<2km的POI对）
-    coord = all_coords.get(poi_name)
-    if coord:
-        neighbor_threshold = 2.0  # km
-        for other_name, other_coord in all_coords.items():
-            if other_name == poi_name:
-                continue
-            dist = haversine(coord[0], coord[1], other_coord[0], other_coord[1])
-            if dist <= neighbor_threshold:
-                # 避免重复（只保留字典序较小的作为head）
-                if poi_name < other_name:
-                    triplets.append({
-                        "head": poi_name,
-                        "relation": "邻近",
-                        "tail": other_name,
-                        "confidence": round(max(0.6, 1.0 - dist / neighbor_threshold), 3),
-                    })
+    # receivedAward: 使用显式荣誉、等级、文保级别等质量信号
+    for field in ("荣誉", "景点级别", "景区级别", "博物馆等级", "文物级别", "保护类型"):
+        raw_value = poi.get(field)
+        if raw_value not in (None, "", "None", "null", "[]", "未知"):
+            triplets.append({
+                "head": poi_name,
+                "head_type": "VenueOrSite",
+                "relation": "receivedAward",
+                "tail": str(raw_value),
+                "tail_type": "Award",
+                "confidence": 0.9,
+                "source_corpus": "descriptive",
+                "diagnostic_dimension": "quality",
+                "evidence_text": str(raw_value),
+            })
+            break
 
-    # 同区关系（同一行政区的标记）
-    # 注：这将在全局merge时自动处理
+    # managedBy: 从显式管理/运营字段中补充
+    for field in ("管理机构", "运营方", "开发商", "物业公司", "批准单位"):
+        raw_value = poi.get(field)
+        if raw_value not in (None, "", "None", "null", "[]"):
+            triplets.append({
+                "head": poi_name,
+                "head_type": "VenueOrSite",
+                "relation": "managedBy",
+                "tail": str(raw_value),
+                "tail_type": "Institution",
+                "confidence": 0.85,
+                "source_corpus": "descriptive",
+                "diagnostic_dimension": "supply",
+                "evidence_text": str(raw_value),
+            })
+            break
 
     return triplets
 

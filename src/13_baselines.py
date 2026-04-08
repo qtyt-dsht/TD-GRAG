@@ -19,6 +19,7 @@ from collections import defaultdict
 from datetime import datetime
 
 import numpy as np
+from src.utils.triplet_utils import PAPER_RELATIONS, load_triplets_file
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -70,22 +71,11 @@ def load_triplets(config: Dict) -> List[Dict]:
     full_path = ROOT / config["kg"].get("triplets_full", "")
     raw_path = ROOT / config["data"]["triplets_raw"]
     path = full_path if Path(full_path).exists() else raw_path
-
-    data = json.loads(Path(path).read_text("utf-8"))
-    # 兼容旧格式
-    if data and isinstance(data[0], dict) and "relations" in data[0]:
-        flat = []
-        for item in data:
-            name = item.get("entity_name", "")
-            for rel in item.get("relations", []):
-                flat.append({
-                    "head": name,
-                    "relation": rel.get("relation", ""),
-                    "tail": rel.get("target", ""),
-                    "confidence": rel.get("confidence", 0.8)
-                })
-        return flat
-    return data
+    return load_triplets_file(
+        Path(path),
+        valid_relations=PAPER_RELATIONS,
+        default_source="baseline"
+    )
 
 
 def load_indicators(config: Dict) -> Dict[str, Dict]:
@@ -651,7 +641,7 @@ def run_ablation(ablation_id: str, config: Dict) -> Dict:
         if "supply" in dimensions:
             supply_trips = [
                 t for t in region_triplets
-                if t.get("relation", "") in ("位于", "邻近", "同区", "同类", "属于", "locate_in", "has_type")
+                if t.get("relation", "") in ("managedBy", "providesService", "hasCapacity", "locatedIn")
             ][:8]
             if supply_trips:
                 ctx = "[供给侧证据]\n"
@@ -663,7 +653,7 @@ def run_ablation(ablation_id: str, config: Dict) -> Dict:
             demand_text = "[需求侧证据]\n"
             demand_trips = [
                 t for t in region_triplets
-                if t.get("relation") in ("关注于",)
+                if t.get("relation") in ("servesDemographic", "regulatedBy")
                 and (t.get("tail", "") in region_poi_names or t.get("head", "") in region_poi_names)
             ][:8]
             for i, t in enumerate(demand_trips, 1):
@@ -674,7 +664,7 @@ def run_ablation(ablation_id: str, config: Dict) -> Dict:
         if "quality" in dimensions:
             quality_trips = [
                 t for t in region_triplets
-                if t.get("relation", "") in ("受约束于", "始建于")
+                if t.get("relation", "") in ("receivedAward", "partnersWith")
             ][:8]
             if quality_trips:
                 ctx = "[质量侧证据]\n"
